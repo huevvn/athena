@@ -7,7 +7,16 @@ export default function Home() {
         <main className="min-h-screen flex flex-col">
             <Navbar />
             {/* Content Section */}
-            <div className="flex-1 flex flex-col items-center justify-center relative">
+            <div className="flex-1 flex flex-col items-center justify-center relative overflow-hidden">
+                {/* Wavy Background with Rotation */}
+                <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+                    <WavyBackground
+                        className="w-full h-full" // Ensure it fills the parent
+                        backgroundFill="black"
+                        waveOpacity={0.15}
+                    />
+                </div>
+
                 {/* Services Grid Container */}
                 <div className="relative z-10 w-full max-w-8xl px-4 sm:px-6 xl:px-0">
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6 p-4 sm:p-6">
@@ -15,17 +24,17 @@ export default function Home() {
                             {
                                 title: "Habit Tracking & Journaling",
                                 href: "/services/project-management",
-                                color: "from-black to-blue-950",
+                                color: "from-black to-[#112D4E]",
                             },
                             {
                                 title: "To-Do List & Task Tracking",
                                 href: "/services/task-tracking",
-                                color: "from-green-950 to-white/70",
+                                color: "from-red-950 to-[#DBE2EF]",
                             },
                             {
                                 title: "Calendar & Event Scheduling",
                                 href: "/services/team-collaboration",
-                                color: "from-orange-950 to-yellow-700",
+                                color: "from-[#112D4E] to-[#3F72AF]",
                             },
                             {
                                 title: "Pomodoros & Time Tracking",
@@ -36,7 +45,7 @@ export default function Home() {
                             <Link
                                 key={index}
                                 href={service.href}
-                                className="group relative flex justify-center items-center p-4 sm:p-6 aspect-square rounded-3xl bg-gradient-to-br transition-all duration-300 hover:scale-[1.02] active:scale-100 hover:shadow-xl hover:shadow-black/30 overflow-hidden"
+                                className="group relative flex justify-center items-center p-4 sm:p-6 aspect-square rounded-[3rem] bg-gradient-to-br transition-all duration-300 hover:scale-[1.02] active:scale-100 hover:shadow-xl hover:shadow-black/30 overflow-hidden"
                             >
                                 {/* Gradient Background */}
                                 <div
@@ -51,14 +60,6 @@ export default function Home() {
                         ))}
                     </div>
                 </div>
-
-                {/* Wavy Background with Performance Optimizations */}
-                <WavyBackground
-                    className="absolute inset-0 z-0 pointer-events-none"
-                    backgroundFill="black"
-                    waveOpacity={0.15}
-                    blur={10}
-                />
             </div>
         </main>
     );
