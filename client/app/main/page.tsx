@@ -10,11 +10,7 @@ export default function Home() {
             <div className="flex-1 flex flex-col items-center justify-center relative overflow-hidden">
                 {/* Wavy Background with Rotation */}
                 <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-                    <WavyBackground
-                        className="w-full h-full" // Ensure it fills the parent
-                        backgroundFill="black"
-                        waveOpacity={0.15}
-                    />
+                    <WavyBackground />
                 </div>
 
                 {/* Services Grid Container */}
@@ -24,7 +20,7 @@ export default function Home() {
                             {
                                 title: "Habit Tracking & Journaling",
                                 href: "/services/project-management",
-                                color: "from-black to-[#112D4E]",
+                                color: "from-black to-yellow-700",
                             },
                             {
                                 title: "To-Do List & Task Tracking",
@@ -34,7 +30,7 @@ export default function Home() {
                             {
                                 title: "Calendar & Event Scheduling",
                                 href: "/services/team-collaboration",
-                                color: "from-[#112D4E] to-[#3F72AF]",
+                                color: "from-black to-[#3F72AF]",
                             },
                             {
                                 title: "Pomodoros & Time Tracking",

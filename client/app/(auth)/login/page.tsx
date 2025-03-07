@@ -48,7 +48,7 @@ export default function Home() {
                         size="lg"
                         className={`w-full p-4 ${
                             isFormValid
-                                ? "bg-white rounded-full hover:bg-yellow-200"
+                                ? "bg-yellow-200 rounded-full hover:bg-purple-200"
                                 : "bg-gray-600 rounded-xl cursor-not-allowed"
                         } text-black font-bold shadow-lg transition-all duration-300`}
                         disabled={!isFormValid} // Disable button if form is not valid

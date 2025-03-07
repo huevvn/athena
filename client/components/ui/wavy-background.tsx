@@ -72,7 +72,7 @@ export const WavyBackground = ({
         nt += getSpeed();
         for (i = 0; i < n; i++) {
             ctx.beginPath();
-            ctx.lineWidth = waveWidth || 60;
+            ctx.lineWidth = waveWidth || 50;
             ctx.strokeStyle = waveColors[i % waveColors.length];
             for (x = 0; x < w; x += 5) {
                 var y = noise(x / 800, 0.3 * i, nt) * 150;

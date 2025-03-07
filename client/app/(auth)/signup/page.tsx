@@ -33,7 +33,7 @@ export default function SignUp() {
                                 placeholder="First Name"
                                 value={fname}
                                 onChange={(e) => setFname(e.target.value)}
-                                className="w-full p-4 border border-gray-600 rounded-2xl shadow-md focus:outline-none focus:ring-4 focus:ring-purple-600 focus:border-transparent text-lg bg-black text-white placeholder-gray-400 transition-all"
+                                className="w-full p-4 border border-gray-600 rounded-2xl shadow-md focus:outline-none focus:ring-4 focus:ring-red-200 focus:border-transparent text-lg bg-black text-white placeholder-gray-400 transition-all"
                             />
                         </div>
 
@@ -44,7 +44,7 @@ export default function SignUp() {
                                 placeholder="Last Name"
                                 value={lname}
                                 onChange={(e) => setLname(e.target.value)}
-                                className="w-full p-4 border border-gray-600 rounded-2xl shadow-md focus:outline-none focus:ring-4 focus:ring-purple-600 focus:border-transparent text-lg bg-black text-white placeholder-gray-400 transition-all"
+                                className="w-full p-4 border border-gray-600 rounded-2xl shadow-md focus:outline-none focus:ring-4 focus:ring-red-200 focus:border-transparent text-lg bg-black text-white placeholder-gray-400 transition-all"
                             />
                         </div>
                     </div>
@@ -56,7 +56,7 @@ export default function SignUp() {
                             placeholder="Email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="w-full p-4 border border-gray-600 rounded-2xl shadow-md focus:outline-none focus:ring-4 focus:ring-purple-600 focus:border-transparent text-lg bg-black text-white placeholder-gray-400 transition-all"
+                            className="w-full p-4 border border-gray-600 rounded-2xl shadow-md focus:outline-none focus:ring-4 focus:ring-red-200 focus:border-transparent text-lg bg-black text-white placeholder-gray-400 transition-all"
                         />
                     </div>
 
@@ -67,7 +67,7 @@ export default function SignUp() {
                             placeholder="Password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            className="w-full p-4 border border-gray-600 rounded-2xl shadow-md focus:outline-none focus:ring-4 focus:ring-purple-600 focus:border-transparent text-lg bg-black text-white placeholder-gray-400 transition-all"
+                            className="w-full p-4 border border-gray-600 rounded-2xl shadow-md focus:outline-none focus:ring-4 focus:ring-red-200 focus:border-transparent text-lg bg-black text-white placeholder-gray-400 transition-all"
                         />
                     </div>
 
@@ -76,7 +76,7 @@ export default function SignUp() {
                         <select
                             value={role}
                             onChange={(e) => setRole(e.target.value)}
-                            className="w-full p-4 border border-gray-600 rounded-2xl shadow-md focus:outline-none focus:ring-4 focus:ring-purple-600 focus:border-transparent text-lg bg-black text-white placeholder-gray-400 transition-all appearance-none"
+                            className="w-full p-4 border border-gray-600 rounded-2xl shadow-md focus:outline-none focus:ring-4 focus:ring-red-200 focus:border-transparent text-lg bg-black text-white placeholder-gray-400 transition-all appearance-none"
                         >
                             <option value="">Select Your Role</option>
 
@@ -199,7 +199,7 @@ export default function SignUp() {
                         size="lg"
                         className={`w-full p-4 ${
                             isFormValid
-                                ? "bg-white rounded-full hover:bg-yellow-200"
+                                ? "bg-yellow-200 rounded-full hover:bg-red-400"
                                 : "bg-gray-600 rounded-xl cursor-not-allowed"
                         } text-black font-bold shadow-lg transition-all duration-300`}
                         disabled={!isFormValid}
