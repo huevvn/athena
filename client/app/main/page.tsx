@@ -5,6 +5,23 @@ import Navbar from "@/components/ui/navbar";
 import { WavyBackground } from "@/components/ui/wavy-background";
 import Link from "next/link";
 
+const services = [
+    {
+        title: "Canvas",
+        description:
+            "Canvas is your digital sanctuary — write journal entries, visualize your ideas, organize content, and plan your vision in one fluid space. Designed to be distraction-free, flexible, and deeply personal.",
+        href: "/services/canvas",
+        color: "from-black to-[#3F72AF]",
+    },
+    {
+        title: "Flow",
+        description:
+            "Flow brings structure to your day — track tasks, build lasting habits, focus with intention, and reflect with clarity. Seamlessly blends productivity with wellbeing in one smooth workspace.",
+        href: "/services/flow",
+        color: "from-red-950 to-black",
+    },
+];
+
 export default function Home() {
     return (
         <motion.div
@@ -14,52 +31,36 @@ export default function Home() {
         >
             <main className="min-h-screen flex flex-col">
                 <Navbar />
-                {/* Content Section */}
+
                 <div className="flex-1 flex flex-col items-center justify-center relative overflow-hidden">
-                    {/* Wavy Background with Rotation */}
+                    {/* Wavy Background */}
                     <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
                         <WavyBackground />
                     </div>
 
-                    {/* Services Grid Container */}
-                    <div className="relative z-10 w-full max-w-8xl px-4 sm:px-6 xl:px-0">
-                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6 p-4 sm:p-6">
-                            {[
-                                {
-                                    title: "Habit Tracking & Journaling",
-                                    href: "/services/project-management",
-                                    color: "from-black to-yellow-700",
-                                },
-                                {
-                                    title: "To-Do List & Task Tracking",
-                                    href: "/services/task-tracking",
-                                    color: "from-red-950 to-[#DBE2EF]",
-                                },
-                                {
-                                    title: "Calendar & Event Scheduling",
-                                    href: "/services/team-collaboration",
-                                    color: "from-black to-[#3F72AF]",
-                                },
-                                {
-                                    title: "Pomodoros & Time Tracking",
-                                    href: "/services/performance-analytics",
-                                    color: "from-red-950 to-black",
-                                },
-                            ].map((service, index) => (
+                    {/* Services */}
+                    <div className="z-10 w-full max-w-full px-4 sm:px-6 xl:px-0">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 place-items-center p-4 sm:p-6">
+                            {services.map((service, index) => (
                                 <Link
                                     key={index}
                                     href={service.href}
-                                    className="group relative flex justify-center items-center p-4 sm:p-6 aspect-square rounded-[3rem] bg-gradient-to-br transition-all duration-300 hover:scale-[1.02] active:scale-100 hover:shadow-xl hover:shadow-black/30 overflow-hidden"
+                                    className="group relative flex flex-col justify-center items-center w-full h-72 rounded-[3rem] bg-gradient-to-br transition-all duration-300 hover:scale-[1.005] active:scale-100 hover:shadow-2xl hover:shadow-black/30 overflow-hidden"
                                 >
-                                    {/* Gradient Background */}
+                                    {/* Gradient Overlay */}
                                     <div
-                                        className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-70 transition-opacity duration-500 group-hover:opacity-100`}
+                                        className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-50 group-hover:opacity-75 transition-opacity duration-500`}
                                     />
 
-                                    {/* Content */}
-                                    <span className="relative z-10 text-white text-center text-lg sm:text-xl lg:text-2xl font-semibold leading-tight sm:leading-snug px-2 break-words">
+                                    {/* Title */}
+                                    <span className="relative z-10 text-white text-2xl sm:text-4xl font-black text-center">
                                         {service.title}
                                     </span>
+
+                                    {/* Description (hidden until hover) */}
+                                    <motion.p className="absolute bottom-6 px-6 text-center text-yellow-100 text-lg z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 hidden xl:block">
+                                        {service.description}
+                                    </motion.p>
                                 </Link>
                             ))}
                         </div>
