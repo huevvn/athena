@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { WavyBackground } from "@/components/ui/wavy-background";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -18,12 +19,12 @@ export default function Home() {
                         <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-[#FF6500] to-white font-sans font-bold mb-6 sm:mb-8 lg:mb-10">
                             Build - Track - Achieve
                         </h1>
-                        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl bg-clip-text text-transparent bg-gradient-to-b from-yellow-200 to-white font-sans font-medium mb-4 sm:mb-6 lg:mb-8">
+                        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl bg-clip-text text-transparent bg-gradient-to-b text-white font-sans font-medium mb-4 sm:mb-6 lg:mb-8">
                             Revolutionize how you work with a tool designed to
                             keep you on track-where productivity meets
                             simplicity.
                         </p>
-                        <a href="/login">
+                        <Link href="/login">
                             <Button
                                 size="lg"
                                 className="p-6 sm:p-8 mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-16 text-xl sm:text-2xl w-full sm:w-auto border-t-2 rounded-full border-[#4D4D4D] bg-[#1F1F1F] hover:bg-white group transition-all flex items-center justify-center gap-4 hover:shadow-xl hover:shadow-neutral-500 duration-500"
@@ -32,7 +33,7 @@ export default function Home() {
                                     Use Athena Today
                                 </span>
                             </Button>
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <WavyBackground />

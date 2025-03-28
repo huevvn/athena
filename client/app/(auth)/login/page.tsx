@@ -16,7 +16,7 @@ export default function Home() {
             {/* The container */}
             <div className="bg-black p-10 md:p-14 lg:p-16 shadow-2xl border-b-2 border-r-2 border-[#F9F7F7] rounded-3xl w-full sm:w-[90%] md:w-[80%] lg:w-[50%]">
                 <h1 className="text-white text-4xl sm:text-5xl md:text-6xl font-extrabold mb-8 text-center">
-                    Hey There, Welcome Back!
+                    Welcome Back!
                 </h1>
 
                 {/* Form Container */}
