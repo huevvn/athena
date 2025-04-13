@@ -1,4 +1,7 @@
+# Ignore help files
 HELP.md
+
+# Ignore target directories (build outputs)
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
