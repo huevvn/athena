@@ -16,7 +16,7 @@ func ShowBanner() {
 		return
 	}
 	pterm.Println()
-	pterm.Print(string(data))
+	pterm.Println(string(data))
 }
 
 func HelloUser() {
@@ -25,24 +25,24 @@ func HelloUser() {
 	emoji := []string{"☕️", "😶", "🤩", "👀", "💪", "🧠", "😴"}
 
 	for {
-		pterm.Println()
 		result, _ := pterm.DefaultInteractiveTextInput.Show("Enter your username")
 		// if username is not in the db :
 		if result != "athena" {
 			pterm.Println()
 			pterm.Error.Println("No profile with this username is found")
+			pterm.Println()
 		} else {
 			username = result
 			break
 		}
 	}
 	for {
-		pterm.Println()
 		result, _ := pterm.DefaultInteractiveTextInput.WithMask("*").Show("Enter Your Password")
 		// if wrong password :
 		if result != "athena123" {
 			pterm.Println()
 			pterm.Error.Println("Wrong password, try again")
+			pterm.Println()
 		} else {
 			break
 		}
